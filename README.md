@@ -22,9 +22,9 @@ O código MATLAB estabelece uma comunicação serial com o Arduino, lê os dados
 1. O código cria um objeto `serialport` para a comunicação serial com o Arduino na porta COM5 a uma taxa de 9600 bps.
 2. Ele verifica se há dados disponíveis na porta serial usando `obj_arduino.NumBytesAvailable`.
 3. Se há dados, ele lê os dados da porta serial usando `readline(obj_arduino)` e exibe esses dados no prompt de comando do MATLAB.
-4. Um tempo limite de 10 segundos (`tempo_limite`) é definido para a leitura.
+4. Um tempo limite de 10 segundos (`timeout`) é definido para a leitura.
 5. O código utiliza a função `tic` para marcar o início da contagem de tempo.
-6. Se o tempo limite for atingido (`toc(start_time) >= tempo_limite`), o código encerra a comunicação serial e exibe uma mensagem de tempo limite.
+6. Se o tempo limite for atingido (`toc(start_time) >= timeout`), o código encerra a comunicação serial e exibe uma mensagem de tempo limite.
 
 ## Uso:
 1. Carregue o código Arduino no Arduino.
